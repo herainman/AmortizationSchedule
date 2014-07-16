@@ -1,7 +1,7 @@
 public class AmortizationInput {
-	private double amount = 0d;
-	private double apr = 0d;
-	private int years = 0;
+	private final double amount;
+	private final double apr;
+	private final int years;
 
 	public AmortizationInput(double amount, double apr, int years) {
 		if (!RangeValidator.isValid(amount, Range.BORROW_AMOUNT) || !RangeValidator.isValid(apr, Range.APR) || !RangeValidator.isValid(years, Range.TERM)) {
